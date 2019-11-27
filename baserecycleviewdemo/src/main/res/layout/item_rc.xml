@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:scaleType="fitXY"
+            android:background="#EB7347"/>
+
+        <TextView
+            android:id="@+id/item_tit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_below="@id/item_img"
+            android:text="Hoteis in Rio de Janeior"/>
+        <TextView
+            android:id="@+id/item_des"
+            android:layout_below="@id/item_tit"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="this is content of story,tell me what is the responsible.If you what to se more ,you can see later...."/>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

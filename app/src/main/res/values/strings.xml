@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MvpFrameTest</string>
+    <string name="MyFabBehavior">com.cy.mvpframetest.home.behavior.MyFabBehavior</string>
+    <string name="FabBehavior">com.cy.mvpframetest.home.behavior.FabBehavior</string>
+    <string name="ScaleDownShowBehavior">com.cy.mvpframetest.home.behavior.ScaleDownShowBehavior</string>
+    <string name="behavior_banner">com.cy.mvpframetest.home.behavior.BannerBehavior</string>
+    <string name="behavior_recyclerView">com.cy.mvpframetest.home.behavior.RecyclerViewBehavior</string>
+
+    <string name="navigation_drawer_open">navigation_drawer_open</string>
+    <string name="navigation_drawer_close">navigation_drawer_close</string>
+    <string name="fragment_home">首页</string>
+    <string name="fragment_system">知识体系</string>
+    <string name="fragment_navigation">导航</string>
+    <string name="fragment_project">项目</string>
+</resources>

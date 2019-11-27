@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+
+
+    defaultConfig {
+        applicationId "com.cy.recgallery"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.appcompatV7
+    implementation rootProject.ext.androiddesign
+    implementation rootProject.ext.recyclerview
+    implementation rootProject.ext.cardview
+    implementation rootProject.ext.butterknife
+    implementation rootProject.ext.rxJava
+    annotationProcessor rootProject.ext.butterknifeCompiler
+    implementation 'jp.wasabeef:glide-transformations:4.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+
+    testImplementation 'junit:junit:4.12'
+}

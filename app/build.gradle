@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.cy.mvpframetest"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.sproguardupport.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false //true开启混淆配置，false关闭
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation rootProject.ext.appcompatV7
+    implementation rootProject.ext.supportV4
+    implementation rootProject.ext.androiddesign
+    implementation rootProject.ext.recyclerview
+    implementation rootProject.ext.retrofit
+    implementation rootProject.ext.retrofitgson
+    implementation rootProject.ext.rxJava
+    implementation rootProject.ext.rxAndroid
+    implementation rootProject.ext.rxAdapter
+    implementation rootProject.ext.glide
+    implementation rootProject.ext.multidex
+    implementation rootProject.ext.butterknife
+    annotationProcessor rootProject.ext.butterknifeCompiler
+    implementation rootProject.ext.okhttp
+    implementation rootProject.ext.okhttpinterceptor
+    implementation rootProject.ext.banner
+    implementation rootProject.ext.agentWeb
+    implementation rootProject.ext.spinKitView
+    implementation rootProject.ext.slidr
+    //implementation rootProject.ext.snake
+    //annotationProcessor rootProject.ext.snakeCompiler
+    implementation rootProject.ext.flexbox
+    implementation rootProject.ext.quickAdapter
+    implementation rootProject.ext.loading
+}

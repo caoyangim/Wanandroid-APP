@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/menu/menu_bottom_nav.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_home"
+        android:icon="@mipmap/home"
+        android:title="首页" />
+
+    <item
+        android:id="@+id/item_system"
+        android:icon="@mipmap/order"
+        android:title="知识体系" />
+
+    <item
+        android:id="@+id/item_navigation"
+        android:icon="@mipmap/navigation"
+        android:title="导航" />
+
+    <item
+        android:id="@+id/item_project"
+        android:icon="@mipmap/project"
+        android:title="项目" />
+</menu>

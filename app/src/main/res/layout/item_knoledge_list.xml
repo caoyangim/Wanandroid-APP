@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <TextView
+            android:id="@+id/item_kl_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/rv_textsize"
+            tools:text="作者"/>
+        <TextView
+            android:id="@+id/item_kl_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/rv_textsize"
+            android:layout_alignParentRight="true"
+            tools:text="2019-12-12"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_kl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:maxLines="2"
+        tools:text="为什么Dialog不能用Application的context？"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/item_kl_chapterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/rv_textsize"
+            tools:text="基础UI控件"/>
+        <ImageView
+            android:layout_width="@dimen/item_kl_heart"
+            android:layout_height="@dimen/item_kl_heart"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/heart_hollow"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

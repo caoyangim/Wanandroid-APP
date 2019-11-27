@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--状态栏透明
+        <item name="android:windowTranslucentStatus">true</item>-->
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <!--自适应留出状态栏高度
+        <item name="android:fitsSystemWindows">true</item>-->
+        <!-- 这两行设置主要是用于设置窗体透明-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="MyTheme" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/white</item>
+        <!--ToolBar 返回键颜色改为白色 -->
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <!--BottomNavigationView样式，需在activity中设置-->
+    <!--没有选中的样式-->
+    <style name="bottom_normal_text">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!--选中的样式-->
+    <style name="bottom_selected_text">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
