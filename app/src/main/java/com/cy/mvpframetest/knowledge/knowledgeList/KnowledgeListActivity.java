@@ -52,7 +52,7 @@ public class KnowledgeListActivity extends BaseActivity {
     }
 
     private void toolBarSet() {
-        toolbar.setTitle("知识体系 >>> "+getIntent().getStringExtra(TIT_INTENT));
+        toolbar.setTitle(getIntent().getStringExtra(TIT_INTENT));
         this.setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);//左侧添加一个默认的返回图标
         //getSupportActionBar().setHomeButtonEnabled(true); 设置返回键可用,此处无效
@@ -106,7 +106,6 @@ public class KnowledgeListActivity extends BaseActivity {
     private BaseQuickAdapter.RequestLoadMoreListener RequestLoadMoreListener = new BaseQuickAdapter.RequestLoadMoreListener() {
         @Override
         public void onLoadMoreRequested() {
-            Log.e(">>>","RequestLoadMoreListener");
             mrc_view.post(new Runnable() {
                 @Override
                 public void run() {

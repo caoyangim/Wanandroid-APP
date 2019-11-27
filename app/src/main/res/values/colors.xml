@@ -145,5 +145,9 @@
     <color name="black">#000000</color><!--黑色 -->   
     <color name="grassgreen">#99cc33</color><!--草绿色 --> 
     <color name="gray_cc">#cccccc</color><!--灰色cc -->   
-    <color name="gray_8f">#8f8f8f</color><!--灰色8f -->   
+    <color name="gray_8f">#8f8f8f</color>
+
+    <color name="gb_nav">#F1F2F3</color>
+    <color name="bg_nav_list">#FBFBFB</color><!--灰色8f -->   
+    <color name="tv_nav_list">#2E4D4D</color>
 </resources>

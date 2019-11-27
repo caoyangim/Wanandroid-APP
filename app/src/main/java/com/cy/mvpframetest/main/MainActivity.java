@@ -21,6 +21,7 @@ import com.cy.mvpframetest.TestFragment;
 import com.cy.mvpframetest.base.BaseActivity;
 import com.cy.mvpframetest.home.HomeFragment;
 import com.cy.mvpframetest.knowledge.knowledge.KnowledgeFragement;
+import com.cy.mvpframetest.navigation.NavigationFragment;
 import com.cy.mvpframetest.utils.ToastUtil;
 
 import java.util.ArrayList;
@@ -121,7 +122,7 @@ public class MainActivity extends BaseActivity {
         fragments=new ArrayList<>();
         fragments.add(HomeFragment.newInstance());
         fragments.add(KnowledgeFragement.newInstance());
-        fragments.add(TestFragment.newInstance());
+        fragments.add(NavigationFragment.newInstance());
         fragments.add(TestFragment.newInstance());
         lastShowFragment=0;
         /**

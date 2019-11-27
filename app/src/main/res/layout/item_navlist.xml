@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_nav_list">
+
+    <TextView
+        android:id="@+id/tv_nav_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/tv_nav_list"
+        tools:text="常用网站"
+        android:height="50dp"
+        android:gravity="center"/>
+
+</LinearLayout>
