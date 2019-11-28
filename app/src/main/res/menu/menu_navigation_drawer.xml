@@ -4,7 +4,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/item_one"
-            android:icon="@drawable/heart"
+            android:icon="@mipmap/heart_hollow"
             android:title="我的收藏" />
         <item
             android:id="@+id/item_two"

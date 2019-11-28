@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
@@ -15,19 +16,23 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.cy.mvpframetest.R;
-import com.cy.mvpframetest.TestFragment;
 import com.cy.mvpframetest.base.BaseActivity;
 import com.cy.mvpframetest.home.HomeFragment;
 import com.cy.mvpframetest.knowledge.knowledge.KnowledgeFragement;
 import com.cy.mvpframetest.navigation.NavigationFragment;
+import com.cy.mvpframetest.project.ProjectFragment;
 import com.cy.mvpframetest.utils.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import jp.wasabeef.glide.transformations.BlurTransformation;
 
 /**
  * Created by lenovo on 2019/6/17
@@ -38,6 +43,8 @@ public class MainActivity extends BaseActivity {
     BottomNavigationView BNView;
     @BindView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
+    @BindView(R.id.navigation)
+    NavigationView mNavigationView;
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.FABtn)
@@ -110,6 +117,19 @@ public class MainActivity extends BaseActivity {
 
         //图标颜色
         //mNavigationView.setItemIconTintList(null);
+
+        //获取xml头布局view
+        View headerView = mNavigationView.getHeaderView(0);
+        //添加头布局的另外一种方式
+        //View headview=navigationview.inflateHeaderView(R.layout.navigationview_header);
+
+        //寻找头部里面的控件
+        ImageView imageView = headerView.findViewById(R.id.bg_nav);
+        ImageView img_head = headerView.findViewById(R.id.img);
+        Glide.with(this).load(R.drawable.avatar)
+                .apply(RequestOptions.bitmapTransform(new BlurTransformation(25, 3)))
+                .into(imageView);
+        Glide.with(this).load(R.drawable.avatar).into(img_head);
     }
 
     @Override
@@ -123,7 +143,7 @@ public class MainActivity extends BaseActivity {
         fragments.add(HomeFragment.newInstance());
         fragments.add(KnowledgeFragement.newInstance());
         fragments.add(NavigationFragment.newInstance());
-        fragments.add(TestFragment.newInstance());
+        fragments.add(ProjectFragment.newInstance());
         lastShowFragment=0;
         /**
          * 在 Activity 中加载第一个 Fragment

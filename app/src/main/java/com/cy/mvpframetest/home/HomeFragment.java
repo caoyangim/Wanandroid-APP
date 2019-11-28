@@ -30,6 +30,8 @@ import java.util.TimerTask;
 
 import butterknife.BindView;
 
+import static com.cy.mvpframetest.content.ContentActivity.toContentActivity;
+
 /**
  * Created by lenovo on 2019/5/25
  * 功能描述：
@@ -115,7 +117,7 @@ public class HomeFragment extends BaseFragment<HomePresenterImpl, HomeModelImpl>
         mAdapter.setOnItemClickListener(new HomeRcAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                HomeFragment.this.toContentActivity(mAdapter.getDatas().get(position).getId(), mAdapter.getDatas().get(position).getLink(), mAdapter.getDatas().get(position).getTitle());
+                toContentActivity(getActivity(),mAdapter.getDatas().get(position).getId(), mAdapter.getDatas().get(position).getLink(), mAdapter.getDatas().get(position).getTitle());
             }
         });
         setState(LoadingFooter.FooterState.Normal);
@@ -134,7 +136,7 @@ public class HomeFragment extends BaseFragment<HomePresenterImpl, HomeModelImpl>
         banner.setOnBannerListener(new OnBannerListener() {
             @Override
             public void OnBannerClick(int position) {
-                HomeFragment.this.toContentActivity(bannerDataItems.get(position).getId(), bannerDataItems.get(position).getUrl(), bannerDataItems.get(position).getTitle());
+                toContentActivity(getActivity(),bannerDataItems.get(position).getId(), bannerDataItems.get(position).getUrl(), bannerDataItems.get(position).getTitle());
             }
         });
         banner.setImageLoader(new MyLoader());
@@ -186,14 +188,6 @@ public class HomeFragment extends BaseFragment<HomePresenterImpl, HomeModelImpl>
         }
     }
 
-    private void toContentActivity(int id, String url, String title) {
-        Intent intent = new Intent(getActivity(), ContentActivity.class);
-        intent.putExtra("id", id);
-        intent.putExtra("url", url);
-        intent.putExtra("title", title);
-        Objects.requireNonNull(getActivity()).startActivity(intent);
-        //getActivity().overridePendingTransition(R.anim.tranlate_in, R.anim.tranlate_out);
-    }
 
     //自定义的图片加载器 banner使用
     private class MyLoader extends ImageLoader {

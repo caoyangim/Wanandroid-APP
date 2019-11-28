@@ -1,6 +1,8 @@
 package com.cy.mvpframetest.content;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -14,6 +16,8 @@ import com.cy.mvpframetest.R;
 import com.cy.mvpframetest.base.BaseActivity;
 import com.just.agentweb.AgentWeb;
 import com.r0adkll.slidr.Slidr;
+
+import java.util.Objects;
 
 import butterknife.BindView;
 
@@ -96,5 +100,14 @@ public class ContentActivity extends BaseActivity {
         int height = resources.getDimensionPixelSize(resourceId);
         Log.e("-->","状态栏高度"+height);
         return height;
+    }
+
+    public static void toContentActivity(Context context,int id, String url, String title) {
+        Intent intent = new Intent(context, ContentActivity.class);
+        intent.putExtra("id", id);
+        intent.putExtra("url", url);
+        intent.putExtra("title", title);
+        Objects.requireNonNull(context).startActivity(intent);
+        ((Activity)context).overridePendingTransition(R.anim.translate_in, R.anim.translate_out);
     }
 }

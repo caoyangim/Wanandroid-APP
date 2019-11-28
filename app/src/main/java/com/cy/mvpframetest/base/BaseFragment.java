@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.cy.mvpframetest.utils.ReflectUtil;
+import com.cy.mvpframetest.utils.ToastUtil;
 
 import butterknife.ButterKnife;
 
@@ -26,7 +27,6 @@ public abstract class BaseFragment<T extends BasePresenter,M extends BaseModel> 
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initData();
-        Log.e("Fragment","onViewCreated");
     }
 
     @Override
@@ -38,13 +38,11 @@ public abstract class BaseFragment<T extends BasePresenter,M extends BaseModel> 
         mModel = ReflectUtil.getT(this, 1);
         initSubViews(containerView);
         mPresenter.onAttach(mModel, this);
-        Log.e("Fragment","onCreateView");
         return containerView;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
-        Log.e("Fragment","onCreate");
         super.onCreate(savedInstanceState);
     }
 
@@ -63,16 +61,17 @@ public abstract class BaseFragment<T extends BasePresenter,M extends BaseModel> 
 
     @Override
     public void showLoading() {
-
+        Log.e(">>","showLoading");
     }
 
     @Override
     public void hideLoading() {
-
+        Log.e(">>","hideLoading");
     }
 
     @Override
     public void showError(String msg) {
-
+        Log.e(">>" , msg);
+        ToastUtil.showToast("网络去外太空了~");
     }
 }

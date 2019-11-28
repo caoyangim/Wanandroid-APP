@@ -49,12 +49,12 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     @Override
     public void showLoading() {
-
+        Log.e(">>","show Loading");
     }
 
     @Override
     public void hideLoading() {
-
+        Log.e(">>","Hide Loading");
     }
 
     @Override

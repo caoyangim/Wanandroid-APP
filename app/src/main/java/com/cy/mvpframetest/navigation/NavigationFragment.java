@@ -33,6 +33,8 @@ import java.util.Queue;
 import butterknife.BindView;
 import butterknife.OnItemClick;
 
+import static com.cy.mvpframetest.content.ContentActivity.toContentActivity;
+
 public class NavigationFragment extends BaseFragment<NavigationPresenterImpl,NavigationModelImpl> implements NavigationContract.NavigationView {
     @BindView(R.id.nav_list)
     RecyclerView categoryList;
@@ -69,12 +71,12 @@ public class NavigationFragment extends BaseFragment<NavigationPresenterImpl,Nav
 
     @Override
     public void showLoading() {
-        Log.e(">>","show Loading");
+
     }
 
     @Override
     public void hideLoading() {
-        Log.e(">>","Hide Loading");
+
     }
 
     @Override
@@ -94,6 +96,7 @@ public class NavigationFragment extends BaseFragment<NavigationPresenterImpl,Nav
         categoryList.setLayoutManager(new LinearLayoutManager(getContext()));
         categoryList.setAdapter(mAdapter);
         setFlexLayout(beanList.get(0).getArticles());
+        catTitle.setText(beanList.get(0).getName());
     }
 
     private void setFlexLayout(final List<ArticleDetailData> data) {
@@ -105,11 +108,7 @@ public class NavigationFragment extends BaseFragment<NavigationPresenterImpl,Nav
             child.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), ContentActivity.class);
-                    intent.putExtra("id", data.get(finalI).getId());
-                    intent.putExtra("url", data.get(finalI).getLink());
-                    intent.putExtra("title", data.get(finalI).getTitle());
-                    Objects.requireNonNull(getActivity()).startActivity(intent);
+                    toContentActivity(getActivity(),data.get(finalI).getId(),data.get(finalI).getLink(),data.get(finalI).getTitle());
                 }
             });
             mFlexbox.addView(child);

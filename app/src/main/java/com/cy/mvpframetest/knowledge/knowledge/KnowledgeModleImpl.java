@@ -24,6 +24,11 @@ public class KnowledgeModleImpl implements KnowledgeContract.KnowledgeModel {
             public void call(List<KnowledgeBean> knowledgeBeans) {
                 listener.onSuccess(knowledgeBeans);
             }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                listener.onError(throwable.toString());
+            }
         });
     }
 }

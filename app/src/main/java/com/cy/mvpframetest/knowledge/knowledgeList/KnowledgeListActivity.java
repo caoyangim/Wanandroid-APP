@@ -23,6 +23,8 @@ import butterknife.BindView;
 import rx.Observable;
 import rx.functions.Action1;
 
+import static com.cy.mvpframetest.content.ContentActivity.toContentActivity;
+
 public class KnowledgeListActivity extends BaseActivity {
     public final static String ID_INTENT = "idIntent";
     public final static String TIT_INTENT = "titIntent";
@@ -79,7 +81,7 @@ public class KnowledgeListActivity extends BaseActivity {
                 mCurrentPage = data.getCurPage();
                 mAdapter = new KnowledgeListRcAdapter(R.layout.item_knoledge_list, data.getDatas());
                 mAdapter.setOnItemClickListener(mListener);
-                mAdapter.setOnLoadMoreListener(RequestLoadMoreListener);
+                mAdapter.setOnLoadMoreListener(RequestLoadMoreListener,mrc_view);
                 mrc_view.setLayoutManager(new LinearLayoutManager(KnowledgeListActivity.this));
                 mrc_view.addItemDecoration(new DividerItemDecoration(KnowledgeListActivity.this, DividerItemDecoration.VERTICAL));
                 mrc_view.setAdapter(mAdapter);
@@ -95,11 +97,7 @@ public class KnowledgeListActivity extends BaseActivity {
     private BaseQuickAdapter.OnItemClickListener mListener = new BaseQuickAdapter.OnItemClickListener() {
         @Override
         public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-            Intent intent = new Intent(KnowledgeListActivity.this, ContentActivity.class);
-            intent.putExtra("id", data.getDatas().get(position).getId());
-            intent.putExtra("url", data.getDatas().get(position).getLink());
-            intent.putExtra("title", data.getDatas().get(position).getTitle());
-            Objects.requireNonNull(KnowledgeListActivity.this).startActivity(intent);
+            toContentActivity(KnowledgeListActivity.this,data.getDatas().get(position).getId(),data.getDatas().get(position).getLink(), data.getDatas().get(position).getTitle());
         }
     };
 

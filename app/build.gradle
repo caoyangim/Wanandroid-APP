@@ -44,4 +44,6 @@ dependencies {
     implementation rootProject.ext.flexbox
     implementation rootProject.ext.quickAdapter
     implementation rootProject.ext.loading
+    implementation rootProject.ext.circleimageview
+    implementation rootProject.ext.glideTransformations
 }

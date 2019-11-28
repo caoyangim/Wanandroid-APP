@@ -72,4 +72,6 @@
             app:menu="@menu/menu_navigation_drawer" />
 
     </android.support.v4.widget.DrawerLayout>
+
+
 </LinearLayout>

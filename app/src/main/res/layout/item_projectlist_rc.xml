@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/item_pro_img"
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10">
+        <TextView
+            android:id="@+id/item_pro_tit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            tools:text="随心音乐，让心跟着跳动起来"/>
+        <TextView
+            android:id="@+id/item_pro_author"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_8f"
+            android:textSize="@dimen/sp_12"
+            tools:text="author"/>
+        <TextView
+            android:id="@+id/item_pro_date"
+            android:layout_toRightOf="@id/item_pro_author"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:textColor="@color/gray_8f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            tools:text="2019-01-01"/>
+    </RelativeLayout>
+
+</LinearLayout>

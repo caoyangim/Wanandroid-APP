@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:background="@color/gray"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:layout_height="170dp"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/bg_nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="@dimen/icon_head"
+        android:layout_height="@dimen/icon_head"
         android:scaleType="centerCrop"
-        android:layout_margin="10dp"
+        android:layout_margin="@dimen/nav_margin_buttom"
+        android:layout_alignParentBottom="true"
         android:src="@drawable/head"/>
     <TextView
+        android:layout_toRightOf="@id/img"
+        android:height="@dimen/icon_head"
+        android:layout_marginBottom="@dimen/nav_margin_buttom"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:text="橘子味的桃子"/>
 
-</LinearLayout>
+</RelativeLayout>

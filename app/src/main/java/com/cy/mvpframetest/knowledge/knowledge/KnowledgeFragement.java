@@ -60,7 +60,8 @@ public class KnowledgeFragement extends BaseFragment<KnowledgePresentImpl,Knowle
                 Intent intent = new Intent(getContext(), KnowledgeListActivity.class);
                 intent.putExtra(ID_INTENT,bean.getChildren().get(position).getId());
                 intent.putExtra(TIT_INTENT,bean.getChildren().get(position).getName());
-                startActivity(intent );
+                startActivity(intent);
+                getActivity().overridePendingTransition(R.anim.translate_in, R.anim.translate_out);
             }
         });
         mAdapter.notifyDataSetChanged();

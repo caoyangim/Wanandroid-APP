@@ -5,4 +5,6 @@
 
     <dimen name="rv_textsize">12sp</dimen>
     <dimen name="item_kl_heart">18dp</dimen>
+    <dimen name="icon_head">65dp</dimen>
+    <dimen name="nav_margin_buttom">20dp</dimen>
 </resources>
