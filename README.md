@@ -8,7 +8,7 @@ WanAndroid 是基于 玩安卓API + MVP + RxJava + OkHttp 实现的客户端, �
 
 #### 效果图：
 
-| <img src="https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129153517.png?raw=true"  /> | <img src="https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129155252.png?raw=true"  /> | <img src="" style="zoom:25%;" />                             |
+| <img src="https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129153517.png?raw=true"  /> | <img src="https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129155252.png?raw=true"  /> | <img src="https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129155300.png?raw=true" style="zoom:25%;" />                             |
 | :----------------------------------------------------------: | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![](https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129155321.png?raw=true) | ![](https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129155355.png?raw=true) | ![](https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129160631.png?raw=true) |
 | ![](https://github.com/caoyangim/Wanandroid-APP/blob/master/screenshots/MuMu20191129160708.png?raw=true) |                                                              |                                                              |
