@@ -18,6 +18,7 @@ import com.cy.mvpframetest.bean.BannerDataItem;
 import com.cy.mvpframetest.content.ContentActivity;
 import com.cy.mvpframetest.home.adapter.HomeRcAdapter;
 import com.cy.mvpframetest.home.adapter.LoadingFooter;
+import com.cy.mvpframetest.home.loador.GlideImageLoader;
 import com.youth.banner.Banner;
 import com.youth.banner.listener.OnBannerListener;
 import com.youth.banner.loader.ImageLoader;
@@ -139,7 +140,6 @@ public class HomeFragment extends BaseFragment<HomePresenterImpl, HomeModelImpl>
                 toContentActivity(getActivity(),bannerDataItems.get(position).getId(), bannerDataItems.get(position).getUrl(), bannerDataItems.get(position).getTitle());
             }
         });
-        banner.setImageLoader(new MyLoader());
         //banner设置方法全部调用完毕时最后调用
         banner.start();
     }
@@ -181,20 +181,4 @@ public class HomeFragment extends BaseFragment<HomePresenterImpl, HomeModelImpl>
         return NSView;
     }
 
-    private class GlideImageLoader extends ImageLoader {
-        @Override
-        public void displayImage(Context context, Object path, ImageView imageView) {
-            Glide.with(context).load((String) path).into(imageView);
-        }
-    }
-
-
-    //自定义的图片加载器 banner使用
-    private class MyLoader extends ImageLoader {
-        @Override
-        public void displayImage(Context context, Object path, ImageView imageView) {
-            imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-            Glide.with(context).load((String) path).into(imageView);
-        }
-    }
 }

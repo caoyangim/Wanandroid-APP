@@ -56,7 +56,7 @@
                     android:layout_marginLeft="4dp"
                     android:layout_marginRight="60dp"
                     android:layout_weight="1">
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/rv_author"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -67,19 +67,7 @@
                         android:layout_marginRight="5dp"
                         android:textColor="@color/gray"
                         android:textSize="@dimen/rv_textsize"
-                        Tools:text="作者：123"/>
-                    <TextView
-                        android:id="@+id/rv_assistant"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:maxEms="8"
-                        android:maxLines="2"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:textColor="@color/gray"
-                        android:textSize="@dimen/rv_textsize"
-                        Tools:text="作者：123"/>
+                        Tools:text="作者：123"/>-->
                     <TextView
                         android:id="@+id/rv_date"
                         android:layout_width="wrap_content"
@@ -91,7 +79,19 @@
                         android:layout_marginRight="5dp"
                         android:textColor="@color/gray"
                         android:textSize="@dimen/rv_textsize"
-                        Tools:text="作者：123"/>
+                        Tools:text="2019-01-01"/>
+                    <TextView
+                        android:id="@+id/rv_assistant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:maxEms="8"
+                        android:maxLines="2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/rv_textsize"
+                        Tools:text="android"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

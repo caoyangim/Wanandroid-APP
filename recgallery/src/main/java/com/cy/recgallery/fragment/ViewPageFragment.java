@@ -1,4 +1,4 @@
-package com.cy.recgallery.viewpage;
+package com.cy.recgallery.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +20,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.cy.recgallery.R;
 import com.cy.recgallery.view.TwinkleImagView;
+import com.cy.recgallery.viewpage.MyVpAdapter;
+import com.cy.recgallery.viewpage.MyVpTransform;
 
 import java.util.ArrayList;
 import java.util.Arrays;

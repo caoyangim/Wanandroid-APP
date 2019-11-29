@@ -1,4 +1,4 @@
-package com.cy.recgallery;
+package com.cy.recgallery.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 
+import com.cy.recgallery.R;
 import com.cy.recgallery.adapter.RcAdapter;
 import com.cy.recgallery.adapter.ScalableCardItemDecoration;
 

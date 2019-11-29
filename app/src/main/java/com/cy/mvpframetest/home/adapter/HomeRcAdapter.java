@@ -95,8 +95,8 @@ public class HomeRcAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     public class NormalHolder  extends RecyclerView.ViewHolder{
         @BindView(R.id.rv_tit)
         TextView rv_tit;
-        @BindView(R.id.rv_author)
-        TextView rv_author;
+        /*@BindView(R.id.rv_author)
+        TextView rv_author;*/
         @BindView(R.id.rv_assistant)
         TextView rv_assistant;
         @BindView(R.id.rv_date)
@@ -109,8 +109,8 @@ public class HomeRcAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         public void setData(int position){
             ArticleDetailData data = datas.get(position);
             rv_tit.setText(data.getTitle());
-            rv_author.setText("作者："+data.getAuthor());
-            rv_assistant.setText("分类博客："+data.getChapterName());rv_date.setText("时间："+data.getNiceDate());
+            //rv_author.setText("作者："+data.getAuthor());
+            rv_assistant.setText(data.getChapterName());rv_date.setText(data.getNiceDate());
         }
     }
 
