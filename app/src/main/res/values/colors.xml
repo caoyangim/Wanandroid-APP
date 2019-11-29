@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#FCFCFC</color>
+    <color name="colorPrimaryDark">#FCFCFC</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="textColorPrimary">#2c2c2c</color>
 
     <color name="transparent">#00000000</color><!--透明色 -->   
     <color name="white">#FFFFFF</color><!--白色 -->   
@@ -147,7 +148,7 @@
     <color name="gray_cc">#cccccc</color><!--灰色cc -->   
     <color name="gray_8f">#8f8f8f</color>
 
-    <color name="gb_nav">#F1F2F3</color>
+    <color name="bg_nav">#F1F2F3</color>
     <color name="bg_nav_list">#FBFBFB</color><!--灰色8f -->   
     <color name="tv_nav_list">#2E4D4D</color>
 </resources>

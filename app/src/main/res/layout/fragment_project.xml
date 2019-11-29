@@ -10,7 +10,7 @@
         android:background="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabTextColor="@color/white"/>
+        app:tabTextColor="@color/textColorPrimary"/>
     <android.support.v4.view.ViewPager
         android:id="@+id/pro_vp"
         android:layout_width="match_parent"

@@ -57,7 +57,9 @@
                 app:menu="@menu/menu_bottom_nav"
                 app:labelVisibilityMode="labeled"
                 app:layout_behavior="@string/MyFabBehavior"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                app:itemIconTint="@drawable/color_state_menu_navi"
+                app:itemTextColor="@drawable/color_state_menu_navi"/>
 
         </android.support.design.widget.CoordinatorLayout>
 

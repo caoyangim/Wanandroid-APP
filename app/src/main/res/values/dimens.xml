@@ -7,4 +7,5 @@
     <dimen name="item_kl_heart">18dp</dimen>
     <dimen name="icon_head">65dp</dimen>
     <dimen name="nav_margin_buttom">20dp</dimen>
+    <dimen name="tv_splash_size">26sp</dimen>
 </resources>
