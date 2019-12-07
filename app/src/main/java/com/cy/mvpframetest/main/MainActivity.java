@@ -1,6 +1,7 @@
 package com.cy.mvpframetest.main;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
@@ -17,16 +18,21 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.cy.mvpframetest.R;
 import com.cy.mvpframetest.base.BaseActivity;
+import com.cy.mvpframetest.events.LoginEvent;
 import com.cy.mvpframetest.home.HomeFragment;
 import com.cy.mvpframetest.knowledge.knowledge.KnowledgeFragement;
 import com.cy.mvpframetest.navigation.NavigationFragment;
 import com.cy.mvpframetest.project.ProjectFragment;
 import com.cy.mvpframetest.utils.ToastUtil;
+
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +59,7 @@ public class MainActivity extends BaseActivity {
     private List<Fragment> fragments;
     private int lastShowFragment;
     private String TAG = "MainActivity>>>>";
+    private TextView mTv_name;
 
     @Override
     protected int getLayoutId() {
@@ -126,10 +133,43 @@ public class MainActivity extends BaseActivity {
         //寻找头部里面的控件
         ImageView imageView = headerView.findViewById(R.id.bg_nav);
         ImageView img_head = headerView.findViewById(R.id.img);
+        mTv_name = headerView.findViewById(R.id.tv_name);
         Glide.with(this).load(R.drawable.avatar)
                 .apply(RequestOptions.bitmapTransform(new BlurTransformation(25, 3)))
                 .into(imageView);
         Glide.with(this).load(R.drawable.avatar).into(img_head);
+        img_head.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,LoginInActivity.class);
+                startActivity(intent);
+            }
+        });
+        mTv_name.setOnClickListener(v ->{
+            Intent intent = new Intent(MainActivity.this,LoginInActivity.class);
+            startActivity(intent);
+        });
+
+        //抽屉栏菜单点击事件
+        mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId())
+                {
+                    case R.id.collect:
+                        Toast.makeText(getApplicationContext(),"你点击了第一项",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.about_us:
+                        Toast.makeText(getApplicationContext(),"你点击了第二项",Toast.LENGTH_SHORT)
+                                .show();
+                        break;
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
+
     }
 
     @Override
@@ -210,4 +250,12 @@ public class MainActivity extends BaseActivity {
         }
         return !mFlag;
     }
+
+    @Subscribe
+    @Override
+    public void onEvent(LoginEvent event) {
+        if (event.isLoginSuccess()){
+            mTv_name.setText(event.getUserName());
+        }
+    };
 }

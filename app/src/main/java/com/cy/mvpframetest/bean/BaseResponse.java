@@ -9,6 +9,7 @@ public class BaseResponse<T> {
     public String errorMsg;
     public T data;
 
+
     /**
      * @return status==1 有非空数据才算成功
      */

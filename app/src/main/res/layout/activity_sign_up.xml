@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_login"
+    android:gravity="center_horizontal">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/back">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN UP"
+            android:textSize="@dimen/sp_16"
+            android:layout_margin="16dp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/tv_nav_list"/>
+    </android.support.v7.widget.Toolbar>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="60dp"
+        android:src="@drawable/avatar"/>
+
+    <com.cy.mvpframetest.view.InputView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:input_icon="@mipmap/user"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/sign_input_margin"
+        android:layout_marginBottom="@dimen/sign_input_margin"
+        app:input_hint="Username"/>
+
+    <com.cy.mvpframetest.view.InputView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:input_icon="@mipmap/password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/sign_input_margin"
+        android:layout_marginBottom="@dimen/sign_input_margin"
+        app:input_hint="Password"/>
+
+    <com.cy.mvpframetest.view.InputView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:input_icon="@mipmap/confirm_password"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="@dimen/sign_input_margin"
+        android:layout_marginBottom="@dimen/sign_input_margin"
+        app:input_hint="Confirm Password"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="80dp"
+        android:background="@drawable/login_btn"
+        android:textColor="@color/tv_nav_list"
+        android:text="@string/sign_up"/>
+
+
+</LinearLayout>

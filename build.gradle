@@ -61,4 +61,5 @@ ext {
     quickAdapter = 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
     loading = 'com.wang.avi:library:2.1.3'
     circleimageview = 'de.hdodenhof:circleimageview:2.2.0'
+    eventBus = 'org.greenrobot:eventbus:3.1.1'
 }

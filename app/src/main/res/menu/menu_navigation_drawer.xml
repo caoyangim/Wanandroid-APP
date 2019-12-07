@@ -3,11 +3,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/item_one"
+            android:id="@+id/collect"
             android:icon="@mipmap/heart_hollow"
             android:title="我的收藏" />
         <item
-            android:id="@+id/item_two"
+            android:id="@+id/about_us"
             android:icon="@drawable/message"
             android:title="关于我们" />
     </group>

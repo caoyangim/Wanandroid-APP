@@ -17,7 +17,7 @@ import android.widget.ImageView;
 
 /**
  * Created by heros on 2019/11/7
- * 功能描述：
+ * 功能描述：亮光闪过特效view
  */
 public class TwinkleImagView extends android.support.v7.widget.AppCompatImageView {
     private Shader mGradient;

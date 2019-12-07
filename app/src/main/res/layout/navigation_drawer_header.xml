@@ -20,6 +20,7 @@
         android:layout_alignParentBottom="true"
         android:src="@drawable/head"/>
     <TextView
+        android:id="@+id/tv_name"
         android:layout_toRightOf="@id/img"
         android:height="@dimen/icon_head"
         android:layout_marginBottom="@dimen/nav_margin_buttom"
@@ -29,6 +30,6 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textSize="16sp"
-        android:text="橘子味的桃子"/>
+        android:text="未登录，点击登录"/>
 
 </RelativeLayout>

@@ -1,24 +1,17 @@
 package com.cy.mvpframetest.base;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cy.mvpframetest.utils.ToastUtil;
-import com.just.agentweb.LogUtils;
-import com.wang.avi.AVLoadingIndicatorView;
+import com.cy.mvpframetest.events.LoginEvent;
 
-import java.lang.reflect.Field;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.ButterKnife;
 
@@ -66,7 +59,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     @Override
     protected void onStop() {
         super.onStop();
-        //Log.e(">>>","onStop");
+        EventBus.getDefault().unregister(this);
     }
 
     @Override
@@ -74,4 +67,15 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         super.onDestroy();
         //Log.e(">>>","onDestroy");
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Subscribe
+    public void onEvent(LoginEvent event) {
+
+    };
 }

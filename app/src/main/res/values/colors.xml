@@ -151,4 +151,7 @@
     <color name="bg_nav">#F1F2F3</color>
     <color name="bg_nav_list">#FBFBFB</color><!--灰色8f -->   
     <color name="tv_nav_list">#2E4D4D</color>
+
+    <color name="bg_login">#fdfdfd</color>
+    <color name="btn_login">#cfdfd3</color>
 </resources>

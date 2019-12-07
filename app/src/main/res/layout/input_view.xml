@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <EditText
+        android:id="@+id/iv_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHeight"
+        android:drawablePadding="20dp"
+        android:background="@color/white"
+        android:maxEms="10"
+        android:hint="用户名"/>
+
+    <View
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_8f"/>
+
+</LinearLayout>
