@@ -2,7 +2,7 @@
 
 #### wanAndroid 应用
 
-WanAndroid 是基于 玩安卓API + MVP + RxJava + OkHttp 实现的客户端, 包括首页，项目，体系，导航，搜索，收藏等功能
+WanAndroid 是基于 玩安卓API + MVP + RxJava + OkHttp 实现的客户端, 包括首页，项目，体系，导航，登录，收藏等功能
 
 项目地址： https://github.com/caoyangim/Wanandroid-APP 
 
