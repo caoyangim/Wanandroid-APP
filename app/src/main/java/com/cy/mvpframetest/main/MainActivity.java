@@ -28,6 +28,7 @@ import com.cy.mvpframetest.base.BaseActivity;
 import com.cy.mvpframetest.events.LoginEvent;
 import com.cy.mvpframetest.home.HomeFragment;
 import com.cy.mvpframetest.knowledge.knowledge.KnowledgeFragement;
+import com.cy.mvpframetest.login.LoginInActivity;
 import com.cy.mvpframetest.navigation.NavigationFragment;
 import com.cy.mvpframetest.project.ProjectFragment;
 import com.cy.mvpframetest.utils.ToastUtil;
@@ -60,6 +61,7 @@ public class MainActivity extends BaseActivity {
     private int lastShowFragment;
     private String TAG = "MainActivity>>>>";
     private TextView mTv_name;
+    private ImageView mImg_head;
 
     @Override
     protected int getLayoutId() {
@@ -132,23 +134,21 @@ public class MainActivity extends BaseActivity {
 
         //寻找头部里面的控件
         ImageView imageView = headerView.findViewById(R.id.bg_nav);
-        ImageView img_head = headerView.findViewById(R.id.img);
+        mImg_head = headerView.findViewById(R.id.img);
         mTv_name = headerView.findViewById(R.id.tv_name);
         Glide.with(this).load(R.drawable.avatar)
                 .apply(RequestOptions.bitmapTransform(new BlurTransformation(25, 3)))
                 .into(imageView);
-        Glide.with(this).load(R.drawable.avatar).into(img_head);
-        img_head.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,LoginInActivity.class);
-                startActivity(intent);
-            }
+        Glide.with(this).load(R.drawable.avatar).into(mImg_head);
+        mImg_head.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LoginInActivity.class);
+            startActivity(intent);
         });
         mTv_name.setOnClickListener(v ->{
             Intent intent = new Intent(MainActivity.this,LoginInActivity.class);
             startActivity(intent);
         });
+
 
         //抽屉栏菜单点击事件
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -256,6 +256,8 @@ public class MainActivity extends BaseActivity {
     public void onEvent(LoginEvent event) {
         if (event.isLoginSuccess()){
             mTv_name.setText(event.getUserName());
+            mImg_head.setOnClickListener(null);
+            mTv_name.setOnClickListener(null);
         }
     };
 }

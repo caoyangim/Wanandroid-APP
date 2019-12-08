@@ -30,6 +30,7 @@
         android:src="@drawable/avatar"/>
 
     <com.cy.mvpframetest.view.InputView
+        android:id="@+id/iv_un"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:input_icon="@mipmap/user"
@@ -40,6 +41,7 @@
         app:input_hint="Username"/>
 
     <com.cy.mvpframetest.view.InputView
+        android:id="@+id/iv_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:input_icon="@mipmap/password"
@@ -50,6 +52,7 @@
         app:input_hint="Password"/>
 
     <com.cy.mvpframetest.view.InputView
+        android:id="@+id/iv_repwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:input_icon="@mipmap/confirm_password"
@@ -60,7 +63,7 @@
         app:input_hint="Confirm Password"/>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_sign"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="80dp"

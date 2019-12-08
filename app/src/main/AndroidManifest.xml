@@ -26,8 +26,8 @@
         </activity>
         <activity android:name=".content.ContentActivity"/>
         <activity android:name=".knowledge.knowledgeList.KnowledgeListActivity"/>
-        <activity android:name=".main.LoginInActivity"/>
-        <activity android:name=".main.SignUpActivity"/>
+        <activity android:name=".login.LoginInActivity"/>
+        <activity android:name=".login.SignUpActivity"/>
     </application>
 
 </manifest>
