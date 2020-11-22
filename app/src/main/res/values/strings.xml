@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MvpFrameTest</string>
+    <string name="app_name">玩·安卓</string>
     <string name="MyFabBehavior">com.cy.mvpframetest.home.behavior.MyFabBehavior</string>
     <string name="FabBehavior">com.cy.mvpframetest.home.behavior.FabBehavior</string>
     <string name="ScaleDownShowBehavior">com.cy.mvpframetest.home.behavior.ScaleDownShowBehavior</string>
